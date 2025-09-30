@@ -1,11 +1,21 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Erronka {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-
+        ArrayList<String> pelikulak = new ArrayList<String>();
+        String[] pelikula={"Lilo y Stitch","Una película de Minecraft","Mufasa: El rey león",
+                            "Cómo entrenar a tu dragón","Capitán América: Brave New World",
+                            "Conclave","Sonic 3: La película","Misión: Imposible. Sentencia Final",
+                            "Blancanieves","Thunderbolt","Padre no hay más que uno 5",
+                            "Wolfgang (Extraordinario)","El casoplón","Un funeral de locos","Sirāt"};
+        ArrayList<String> gelak = new ArrayList<String>();
+        String[] gela ={"Umeen gela","Superheroien gela","Thriller gela","Zientzia fikzioko gela","Zientzia fikzioko gela"};
         String larunbata = null;
-        String igandea = null;
+        String igandea = null;  
+        String segui=null;
+        String atera=null;
 
         System.out.println("Hasierako menua:");
         System.out.println("1- Aste Eguna aukeratu.");
@@ -16,13 +26,19 @@ public class Erronka {
         System.out.println(" ");
         System.out.println("Aukeratu bat:");
         int aukera=sc.nextInt();
+        sc.nextLine();
 
         switch (aukera) {
             case 1:
-                System.out.println("Aukeratu egun bat: larunbata edo igandea:");
-                String eguna=sc.nextLine();
-                if(eguna.equals(larunbata) || eguna.equals(igandea)){
-                    //falta
+                System.out.println("Aukeratu egun bat larunbata edo igandea:");
+                String eguna = sc.nextLine();
+                
+                if(eguna.equalsIgnoreCase("larunbata")){
+                    System.out.println();
+                }else if(eguna.equalsIgnoreCase("igandea")){
+
+                }else{
+                    System.out.println("Errorea. Bakarrik larunbata edo igandea idatzi behar duzu.");
                 }
                 break;
 
@@ -35,8 +51,16 @@ public class Erronka {
                 break;
 
             case 3:
-                
-                break;
+                System.out.println("Gure kokapena hau da");
+                System.out.println("Bo. Txiki-Erdi, 7, 20170 Usurbil, Gipuzkoa");
+                System.out.println("");
+                System.out.println( "Zer egin nahi duzu? Atera edo beste aukera bat aukeratu? (atera/segui):");
+                String selekzioa=sc.nextLine();
+                if(selekzioa.equalsIgnoreCase(atera)){
+                    break;
+                }if(selekzioa.equalsIgnoreCase(segui)){
+                    break;
+                }
 
             case 4:
                 System.out.println("Gure ordutegia:");
