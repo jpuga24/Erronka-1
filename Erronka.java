@@ -14,8 +14,6 @@ public class Erronka {
         ArrayList<String> gelak = new ArrayList<String>();
         String[] gela ={"Umeen gela","Superheroien gela","Thriller gela","Zientzia fikzioko gela","Zientzia fikzioko gela"};
         
-        String larunbata = null;
-        String igandea = null;
         String segui=null;
         String atera=null;
 
@@ -57,7 +55,17 @@ public class Erronka {
                 System.out.println("1- Pelikula kopurua eta hauen izenak.");
                 System.out.println("2- Gela kopurua eta hauen izenak.");
                 int opzioa=sc.nextInt();
-                //falta
+                if(opzioa==1){
+                    System.out.println("Pelikularen kopurua: "+pelikula.length);
+                    for(String p:pelikula){
+                        System.out.println("Haien izenak: "+p);
+                    }
+                }else{
+                    System.out.println("Pelikularen kopurua: "+gela.length);
+                    for(String g:gela){
+                        System.out.println("Haien izenak: "+g);
+                    }
+                }
                 break;
 
             case 3:
