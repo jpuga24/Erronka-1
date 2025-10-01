@@ -64,6 +64,10 @@ public class Erronka {
                         System.out.println("Haien izenak: "+g);
                     }
                 }
+
+                System.out.println("Aukeratu erosi nahi duzun pelikula:");
+                String erosi=sc.nextLine();
+
                 break;
 
             case 3:
