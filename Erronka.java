@@ -10,25 +10,31 @@ public class Erronka {
                             "Conclave","Sonic 3: La película","Misión: Imposible. Sentencia Final",
                             "Blancanieves","Thunderbolt","Padre no hay más que uno 5",
                             "Wolfgang (Extraordinario)","El casoplón","Un funeral de locos","Sirāt"};
+
         ArrayList<String> gelak = new ArrayList<String>();
         String[] gela ={"Umeen gela","Superheroien gela","Thriller gela","Zientzia fikzioko gela","Zientzia fikzioko gela"};
+        
         String larunbata = null;
-        String igandea = null;  
+        String igandea = null;
         String segui=null;
         String atera=null;
 
-        System.out.println("Hasierako menua:");
-        System.out.println("1- Aste Eguna aukeratu.");
-        System.out.println("2- Pelikulen informazio orokorra.");
-        System.out.println("3- Kokapena ikusi.");
-        System.out.println("4- Irekiera ordutegia ikusi.");
-        System.out.println("5- Irtetzeko aukera.");
-        System.out.println(" ");
-        System.out.println("Aukeratu bat:");
-        int aukera=sc.nextInt();
-        sc.nextLine();
+        boolean continuar=true;
 
-        switch (aukera) {
+        while(continuar){
+
+            System.out.println("Hasierako menua:");
+            System.out.println("1- Aste Eguna aukeratu.");
+            System.out.println("2- Pelikulen informazio orokorra.");
+            System.out.println("3- Kokapena ikusi.");
+            System.out.println("4- Irekiera ordutegia ikusi.");
+            System.out.println("5- Irtetzeko aukera.");
+            System.out.println(" ");
+            System.out.println("Aukeratu bat:");
+            int aukera=sc.nextInt();
+            sc.nextLine();
+
+            switch (aukera) {
             case 1:
                 System.out.println("Aukeratu egun bat larunbata edo igandea:");
                 String eguna = sc.nextLine();
@@ -54,7 +60,7 @@ public class Erronka {
                 System.out.println("Gure kokapena hau da");
                 System.out.println("Bo. Txiki-Erdi, 7, 20170 Usurbil, Gipuzkoa");
                 System.out.println("");
-                System.out.println( "Zer egin nahi duzu? Atera edo beste aukera bat aukeratu? (atera/segui):");
+                System.out.println("Zer egin nahi duzu? Atera edo beste aukera bat aukeratu? (atera/segui):");
                 String selekzioa=sc.nextLine();
                 if(selekzioa.equalsIgnoreCase(atera)){
                     break;
@@ -71,8 +77,12 @@ public class Erronka {
             case 5:
                 System.out.println("Irteera aukeratu duzu");
                 break;
-        }
 
-        sc.close();
+            default:
+                System.out.println("Elige una opción correcta");
+                break;
+        }
+        }
+        
     }
 }
