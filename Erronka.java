@@ -13,14 +13,12 @@ public class Erronka {
 
         ArrayList<String> gelak = new ArrayList<String>();
         String[] gela ={"Umeen gela","Superheroien gela","Thriller gela","Zientzia fikzioko gela","Zientzia fikzioko gela"};
-        
-        String segui=null;
-        String atera=null;
 
         boolean continuar=true;
 
         while(continuar){
 
+            System.out.println(" ");
             System.out.println("Hasierako menua:");
             System.out.println("1- Aste Eguna aukeratu.");
             System.out.println("2- Pelikulen informazio orokorra.");
@@ -71,14 +69,16 @@ public class Erronka {
             case 3:
                 System.out.println("Gure kokapena hau da");
                 System.out.println("Bo. Txiki-Erdi, 7, 20170 Usurbil, Gipuzkoa");
-                System.out.println("");
                 System.out.println("Zer egin nahi duzu? Atera edo beste aukera bat aukeratu? (atera/segui):");
                 String selekzioa=sc.nextLine();
-                if(selekzioa.equalsIgnoreCase(atera)){
-                    break;
-                }if(selekzioa.equalsIgnoreCase(segui)){
+                if(selekzioa.equalsIgnoreCase("atera")){
+                    continuar=false;
                     break;
                 }
+                if(selekzioa.equalsIgnoreCase("segui")){
+                    break;
+                }
+                break;
 
             case 4:
                 System.out.println("Gure ordutegia:");
