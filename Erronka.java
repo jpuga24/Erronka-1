@@ -9,7 +9,7 @@ public class Erronka {
                             "Cómo entrenar a tu dragón","Capitán América: Brave New World",
                             "Conclave","Sonic 3: La película","Misión: Imposible. Sentencia Final",
                             "Blancanieves","Thunderbolt","Padre no hay más que uno 5",
-                            "Wolfgang (Extraordinario)","El casoplón","Un funeral de locos","Sirāt"};
+                            "Wolfgang (Extraordinario)","El casoplón","Un funeral de locos","Sirat"};
 
         ArrayList<String> gelak = new ArrayList<String>();
         String[] gela ={"Umeen gela","Superheroien gela","Thriller gela","Zientzia fikzioko gela","Zientzia fikzioko gela"};
@@ -40,9 +40,13 @@ public class Erronka {
                 String eguna = sc.nextLine();
                 
                 if(eguna.equalsIgnoreCase("larunbata")){
-                    System.out.println();
+                    for(String p:pelikula){
+                        System.out.println(p);
+                    }
                 }else if(eguna.equalsIgnoreCase("igandea")){
-
+                    for(String p:pelikula){
+                        System.out.println(p);
+                    }
                 }else{
                     System.out.println("Errorea. Bakarrik larunbata edo igandea idatzi behar duzu.");
                 }
