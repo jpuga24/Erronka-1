@@ -76,13 +76,13 @@ public class Erronka {
         
             case 5:
                 System.out.println("Irteera aukeratu duzu");
+                continuar=false;
                 break;
 
             default:
-                System.out.println("Elige una opción correcta");
                 break;
         }
         }
-        
+        sc.close();
     }
 }
